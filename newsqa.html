@@ -96,12 +96,12 @@
             //Function will replace text with HTML span tag with CSS class
             function replaceText(str, char_ranges) {
                 mainParagraph = str;
-                for (range of char_ranges) {
+                for (range of char_ranges.reverse()) {
                     console.log(range);
                     if (range[1] > range[0]) {
                         let answer = str.substring(range[0], range[1]);
                         let answerWithHtml = `<span class=custom-color>${answer}</span>`
-                        mainParagraph = mainParagraph.replace(answer, answerWithHtml);
+                        mainParagraph = mainParagraph.substring(0, range[0]) + answerWithHtml + mainParagraph.substring(range[1]);
                     }
                 }
                 return mainParagraph;
