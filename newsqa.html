@@ -49,7 +49,7 @@
         <br/>
         <h3 id="headerParagraph" class="d-none">Article Text</h3>
         <p id="newParagraph"></p>
-        <h3 id="answerParagraph" class="d-none">Answer </h3>
+        <h3 id="answerParagraph" class="d-none" style="white-space: pre-line">Answer </h3>
         <p id="answer"></p>
     </div>
 
@@ -110,6 +110,8 @@
             $.ajax(settings).done(function (response) {
                 $("#headerParagraph").removeClass("d-none")
                 let answerHtml = replaceText($("#paragraph").val(), response.char_ranges);
+                // Preserve new lines
+                answerHtml = answerHtml.replace(/(?:\r\n|\r|\n)/g, '<br>');
                 $("#newParagraph").html(answerHtml)
                 $("#answerParagraph").removeClass("d-none")
                 let str = '';
