@@ -1,2 +1,2 @@
-Sitemap: https://smitkiri.github.io/sitemap.xml
+Sitemap: https://smitkiri.com/sitemap.xml
 User-agent: *
