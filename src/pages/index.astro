@@ -1,0 +1,559 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- Nav -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-name">Smit Kiri</a>
+      <div class="nav-right">
+        <a href="https://github.com/smitkiri" target="_blank" rel="noopener noreferrer" class="nav-ext">GitHub</a>
+        <a href="https://linkedin.com/in/smitkiri" target="_blank" rel="noopener noreferrer" class="nav-ext">LinkedIn</a>
+        <a href="mailto:smit.kiri@gmail.com" class="nav-ext">Email</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-intro">
+        <div class="hero-text">
+          <h1 class="hero-name">Smit Kiri</h1>
+          <p class="hero-role">
+            Lead ML Infra Engineer
+            <span class="role-sep">at</span>
+            <a href="https://klaviyo.com" target="_blank" rel="noopener noreferrer" class="role-company">Klaviyo</a>
+          </p>
+        </div>
+        <img src="/profile.jpg" alt="Smit Kiri" class="hero-photo" />
+      </div>
+      <p class="hero-bio">
+        I build the distributed compute and model serving infrastructure that powers
+        Klaviyo's machine learning — Ray clusters running across hundreds of nodes,
+        platforms that compress deployment timelines from months to days, and the
+        tooling that lets ~40 ML engineers and data scientists ship without fighting
+        infrastructure.
+      </p>
+    </section>
+
+    <!-- What I work on -->
+    <section class="section">
+      <p class="section-eyebrow">What I work on</p>
+
+      <div class="focus-list">
+        <div class="focus-item">
+          <h2 class="focus-title">Distributed Compute</h2>
+          <p class="focus-body">
+            Klaviyo's ML teams needed to run large-scale training and batch inference
+            workloads across hundreds of nodes, reliably. I built DART Jobs, the compute
+            platform that made this possible — powered by Ray Clusters on Kubernetes. It
+            now handles 350–450 ML jobs per day on average, enabling research and
+            production workloads that had no path to execution before this infrastructure
+            existed.
+          </p>
+        </div>
+
+        <div class="focus-item">
+          <h2 class="focus-title">Model Serving</h2>
+          <p class="focus-body">
+            Deploying a new production online inference system used to require months of
+            custom infrastructure work from individual teams. I built DART Online
+            (DAtascience RunTime Online), a shared serving platform on Ray Serve that
+            compressed that timeline to a few days. Teams get a reliable, scalable,
+            observable path from trained model to production without rebuilding the
+            foundation each time.
+          </p>
+        </div>
+
+        <div class="focus-item">
+          <h2 class="focus-title">ML Platform & Tooling</h2>
+          <p class="focus-body">
+            The internal layer that multiplies what ML engineers and data scientists can
+            do: experiment tracking with MLflow on Kubernetes, a model registry, VectorDB
+            infrastructure, and model monitoring. I've also built CI/CD pipelines for ML
+            workflows and contributed to a GitOps setup that condenses Kubernetes
+            deployments to a single YAML — less friction between an idea and a
+            production system.
+          </p>
+        </div>
+
+        <div class="focus-item">
+          <h2 class="focus-title">
+            ML Orchestration
+            <span class="focus-wip">in progress</span>
+          </h2>
+          <p class="focus-body">
+            Currently building end-to-end ML pipeline orchestration with Prefect —
+            bringing structured scheduling, dependency management, and observability
+            to the full ML lifecycle, from data ingestion through model deployment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work -->
+    <section class="section">
+      <p class="section-eyebrow">Selected work</p>
+
+      <div class="work-list">
+        <article class="work-item">
+          <div class="work-header">
+            <h2 class="work-title">From three months to three days</h2>
+            <span class="work-year">2022</span>
+          </div>
+          <p class="work-body">
+            At Klaviyo, each ML team was building its own serving infrastructure from
+            scratch. The process was slow, duplicated across teams, and pulled engineers
+            away from model development. I designed and built DART Online, a shared
+            inference platform on Ray Serve that standardized the path from trained model
+            to production. Standing up a new serving endpoint went from a months-long
+            engineering effort to a matter of days.
+          </p>
+        </article>
+
+        <article class="work-item">
+          <div class="work-header">
+            <h2 class="work-title">Distributed ML compute at Klaviyo</h2>
+            <span class="work-year">2023</span>
+          </div>
+          <p class="work-body">
+            Distributed training and large-scale batch inference across hundreds of nodes
+            wasn't possible with Klaviyo's existing infrastructure. I built DART Jobs,
+            the platform that changed that — covering cluster provisioning, job
+            scheduling, fault tolerance, and observability, all running on Ray and
+            Kubernetes. DART Jobs now handles 350–450 ML jobs per day and has become the
+            foundation for Klaviyo's most compute-intensive research and production
+            workloads.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Writing & Talks -->
+    <section class="section">
+      <p class="section-eyebrow">Writing & talks</p>
+
+      <div class="writing-list">
+        <a
+          href="https://www.youtube.com/watch?v=9vcMfdQC_p4"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="writing-featured"
+        >
+          <div class="featured-badge">
+            <span>Talk</span>
+            <span class="meta-sep">·</span>
+            <span>Ray Summit 2024</span>
+          </div>
+          <p class="featured-title">How Klaviyo built a robust model serving platform with Ray Serve</p>
+          <p class="featured-desc">
+            A deep dive into DART Online — how we designed and scaled Klaviyo's
+            shared model serving platform using Ray Serve, the trade-offs we navigated,
+            and lessons learned running it in production.
+          </p>
+          <span class="featured-cta">Watch on YouTube ↗</span>
+        </a>
+
+        <a
+          href="https://medium.com/klaviyo-engineering/how-klaviyo-built-a-robust-model-serving-platform-with-ray-serve-c02ec65788b3"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="writing-row"
+        >
+          <div class="writing-meta">
+            <span class="writing-type">Article</span>
+            <span class="meta-sep">·</span>
+            <span class="writing-venue">Klaviyo Engineering</span>
+          </div>
+          <div class="writing-bottom">
+            <span class="writing-title">How Klaviyo built a robust model serving platform with Ray Serve</span>
+            <span class="writing-arrow">↗</span>
+          </div>
+        </a>
+
+        <a
+          href="https://medium.com/klaviyo-engineering/mlflow-setup-on-kubernetes-with-rds-and-s3-6a589bb40f3c"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="writing-row"
+        >
+          <div class="writing-meta">
+            <span class="writing-type">Article</span>
+            <span class="meta-sep">·</span>
+            <span class="writing-venue">Klaviyo Engineering</span>
+          </div>
+          <div class="writing-bottom">
+            <span class="writing-title">MLflow setup on Kubernetes with RDS and S3</span>
+            <span class="writing-arrow">↗</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="mailto:smit.kiri@gmail.com" class="footer-link">smit.kiri@gmail.com</a>
+      <span class="footer-sep">·</span>
+      <a href="https://github.com/smitkiri" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+      <span class="footer-sep">·</span>
+      <a href="https://linkedin.com/in/smitkiri" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  /* ── Nav ── */
+  #nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+  }
+
+  #nav.scrolled { border-color: var(--border); }
+
+  .nav-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-name {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    transition: opacity 0.2s;
+  }
+  .nav-name:hover { opacity: 0.5; }
+
+  .nav-right { display: flex; gap: 1.5rem; align-items: center; }
+
+  .nav-ext {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .nav-ext:hover { color: var(--text); }
+
+  /* ── Main container ── */
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 132px 0 96px;
+  }
+
+  .hero-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-photo {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center;
+    flex-shrink: 0;
+  }
+
+  .hero-name {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-role {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    letter-spacing: 0.01em;
+  }
+
+  .role-sep { margin: 0 0.3em; color: var(--light); }
+
+  .role-company {
+    color: var(--accent);
+    transition: opacity 0.2s;
+  }
+  .role-company:hover { opacity: 0.7; }
+
+  .hero-bio {
+    font-size: 1.0625rem;
+    line-height: 1.85;
+    color: var(--body);
+    max-width: 620px;
+  }
+
+  /* ── Sections ── */
+  .section {
+    padding: 72px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .section-eyebrow {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 2.75rem;
+    line-height: 1.1;
+  }
+
+  /* ── Focus areas ── */
+  .focus-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .focus-title {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    letter-spacing: -0.01em;
+  }
+
+  .focus-wip {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 400;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    padding: 1px 5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+
+  .focus-body {
+    font-size: 0.9375rem;
+    line-height: 1.85;
+    color: var(--body);
+  }
+
+  /* ── Selected work ── */
+  .work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .work-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .work-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .work-year {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--light);
+    flex-shrink: 0;
+  }
+
+  .work-body {
+    font-size: 0.9375rem;
+    line-height: 1.85;
+    color: var(--body);
+  }
+
+  /* ── Writing & Talks ── */
+  .writing-list { display: flex; flex-direction: column; gap: 0; }
+
+  /* Featured talk card */
+  .writing-featured {
+    display: block;
+    padding: 1.5rem;
+    margin-bottom: 1.75rem;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    background: color-mix(in srgb, var(--accent) 5%, transparent);
+    transition: background 0.2s, transform 0.2s;
+  }
+  .writing-featured:hover {
+    background: color-mix(in srgb, var(--accent) 9%, transparent);
+    transform: translateY(-1px);
+  }
+
+  .featured-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.625rem;
+  }
+
+  .featured-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 0.625rem;
+    letter-spacing: -0.01em;
+  }
+
+  .featured-desc {
+    font-size: 0.875rem;
+    line-height: 1.75;
+    color: var(--body);
+    margin-bottom: 1rem;
+  }
+
+  .featured-cta {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+
+  /* Article rows */
+  .writing-row {
+    display: block;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: padding-left 0.25s ease;
+  }
+  .writing-row:first-of-type { border-top: 1px solid var(--border); }
+  .writing-row:hover { padding-left: 0.625rem; }
+
+  .writing-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .writing-type {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--light);
+  }
+
+  .meta-sep { font-size: 0.65rem; color: var(--border); }
+
+  .writing-venue {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+  }
+
+  .writing-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .writing-title {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  .writing-arrow {
+    color: var(--light);
+    font-size: 1rem;
+    flex-shrink: 0;
+    transition: transform 0.2s, color 0.2s;
+  }
+  .writing-row:hover .writing-arrow {
+    transform: translate(2px, -2px);
+    color: var(--text);
+  }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2.25rem 0 3.5rem;
+  }
+
+  .footer-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-link {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--light);
+    transition: color 0.2s;
+  }
+  .footer-link:hover { color: var(--text); }
+
+  .footer-sep { font-size: 0.78rem; color: var(--border); }
+
+  /* ── Mobile ── */
+  @media (max-width: 580px) {
+    .hero { padding: 96px 0 72px; }
+    .hero-name { font-size: 1.75rem; }
+    .hero-photo { width: 72px; height: 72px; }
+    .nav-right { gap: 1rem; }
+    .work-header { flex-direction: column; gap: 0.25rem; }
+  }
+</style>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav?.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+</script>
