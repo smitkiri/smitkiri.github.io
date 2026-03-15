@@ -43,32 +43,13 @@ import Layout from '../layouts/Layout.astro';
         focus is on foundations that compound: infrastructure and strategy that
         multiply what ~40 ML engineers and data scientists can accomplish.
       </p>
-
-      <div class="stats-grid">
-        <div class="stat-tile">
-          <span class="stat-value">350–450</span>
-          <span class="stat-label">ML jobs per day on DART Jobs</span>
-        </div>
-        <div class="stat-tile">
-          <span class="stat-value">7×</span>
-          <span class="stat-label">increase in modeling runs (DART V2)</span>
-        </div>
-        <div class="stat-tile">
-          <span class="stat-value">Months → Days</span>
-          <span class="stat-label">model deployment via DART Online</span>
-        </div>
-        <div class="stat-tile">
-          <span class="stat-value">40+</span>
-          <span class="stat-label">ML engineers on the platform</span>
-        </div>
-      </div>
     </section>
 
     <!-- What I work on -->
     <section class="section" id="work-on">
-      <p class="section-eyebrow">What I work on</p>
-
-      <div class="focus-list">
+      <details>
+        <summary class="section-eyebrow">What I work on</summary>
+        <div class="focus-list">
         <div class="focus-item">
           <h2 class="focus-title">Distributed Compute</h2>
           <p class="focus-body">
@@ -128,14 +109,15 @@ import Layout from '../layouts/Layout.astro';
             to the full ML lifecycle, from data ingestion through model deployment.
           </p>
         </div>
-      </div>
+        </div>
+      </details>
     </section>
 
     <!-- Selected Work -->
     <section class="section" id="selected-work">
-      <p class="section-eyebrow">Selected work</p>
-
-      <div class="work-list">
+      <details>
+        <summary class="section-eyebrow">Selected work</summary>
+        <div class="work-list">
         <article class="work-item">
           <div class="work-header">
             <h2 class="work-title">Reinventing Klaviyo's compute platform</h2>
@@ -198,14 +180,15 @@ import Layout from '../layouts/Layout.astro';
             engineering effort to a matter of days.
           </p>
         </article>
-      </div>
+        </div>
+      </details>
     </section>
 
     <!-- Writing & Talks -->
     <section class="section" id="writing">
-      <p class="section-eyebrow">Writing & talks</p>
-
-      <div class="writing-list">
+      <details>
+        <summary class="section-eyebrow">Writing & talks</summary>
+        <div class="writing-list">
         <a
           href="https://www.youtube.com/watch?v=9vcMfdQC_p4"
           target="_blank"
@@ -341,7 +324,8 @@ import Layout from '../layouts/Layout.astro';
             <span class="writing-arrow">↗</span>
           </div>
         </a>
-      </div>
+        </div>
+      </details>
     </section>
   </main>
 
@@ -436,7 +420,7 @@ import Layout from '../layouts/Layout.astro';
 
   /* ── Hero ── */
   .hero {
-    padding: 132px 0 64px;
+    padding: 132px 0 96px;
   }
 
   .hero-intro {
@@ -489,40 +473,6 @@ import Layout from '../layouts/Layout.astro';
     max-width: 620px;
   }
 
-  /* ── Stat grid ── */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-    margin-top: 2rem;
-  }
-
-  .stat-tile {
-    background: color-mix(in srgb, var(--border) 30%, var(--bg));
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 0.75rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-
-  .stat-value {
-    font-family: var(--font-display);
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: var(--accent);
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-  }
-
-  .stat-label {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    color: var(--muted);
-    line-height: 1.4;
-  }
-
   /* ── Sections ── */
   .section {
     padding: 72px 0;
@@ -536,9 +486,27 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 400;
     letter-spacing: -0.02em;
     color: var(--text);
-    margin-bottom: 2.75rem;
     line-height: 1.1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
   }
+  .section-eyebrow::-webkit-details-marker { display: none; }
+  .section-eyebrow::after {
+    content: '+';
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--light);
+    transition: color 0.2s;
+    flex-shrink: 0;
+  }
+  details[open] .section-eyebrow::after { content: '−'; }
+  details[open] .section-eyebrow { margin-bottom: 2.75rem; }
+  details .section-eyebrow:hover::after { color: var(--text); }
 
   /* ── Focus areas ── */
   .focus-list {
@@ -762,12 +730,11 @@ import Layout from '../layouts/Layout.astro';
 
   /* ── Mobile ── */
   @media (max-width: 580px) {
-    .hero { padding: 96px 0 48px; }
+    .hero { padding: 96px 0 72px; }
     .hero-name { font-size: 1.75rem; }
     .hero-photo { width: 72px; height: 72px; }
     .nav-right { gap: 1rem; }
     .work-header { flex-direction: column; gap: 0.25rem; }
-    .stats-grid { grid-template-columns: 1fr; }
   }
 </style>
 
