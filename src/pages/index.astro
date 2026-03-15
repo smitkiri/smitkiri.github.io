@@ -30,11 +30,12 @@ import Layout from '../layouts/Layout.astro';
         <img src="/profile.jpg" alt="Smit Kiri" class="hero-photo" />
       </div>
       <p class="hero-bio">
-        I build the distributed compute and model serving infrastructure that powers
-        Klaviyo's machine learning — Ray clusters running across hundreds of nodes,
-        platforms that compress deployment timelines from months to days, and the
-        tooling that lets ~40 ML engineers and data scientists ship without fighting
-        infrastructure.
+        I build and lead the ML infrastructure that powers Klaviyo's machine
+        learning — Ray clusters running distributed compute across hundreds of
+        nodes, serving platforms that compress deployment timelines from months to
+        days, and the technical roadmaps that define how the platform evolves. My
+        focus is on foundations that compound: infrastructure and strategy that
+        multiply what ~40 ML engineers and data scientists can accomplish.
       </p>
     </section>
 
@@ -51,7 +52,8 @@ import Layout from '../layouts/Layout.astro';
             platform that made this possible — powered by Ray Clusters on Kubernetes. It
             now handles 350–450 ML jobs per day on average, enabling research and
             production workloads that had no path to execution before this infrastructure
-            existed.
+            existed. In 2025, a ground-up redesign of the platform drove a 7x increase
+            in modeling runs and doubled the number of new users.
           </p>
         </div>
 
@@ -76,6 +78,17 @@ import Layout from '../layouts/Layout.astro';
             workflows and contributed to a GitOps setup that condenses Kubernetes
             deployments to a single YAML — less friction between an idea and a
             production system.
+          </p>
+        </div>
+
+        <div class="focus-item">
+          <h2 class="focus-title">Platform Strategy</h2>
+          <p class="focus-body">
+            Defining long-horizon technical direction for Klaviyo's ML platform —
+            authoring roadmaps for distributed compute, model serving, and the
+            broader 2026 ML Platform Vision. I also work across engineering teams
+            to review system designs and ensure the ML platform coheres with
+            infrastructure direction at the company level.
           </p>
         </div>
 
@@ -110,6 +123,21 @@ import Layout from '../layouts/Layout.astro';
             inference platform on Ray Serve that standardized the path from trained model
             to production. Standing up a new serving endpoint went from a months-long
             engineering effort to a matter of days.
+          </p>
+        </article>
+
+        <article class="work-item">
+          <div class="work-header">
+            <h2 class="work-title">Reinventing Klaviyo's compute platform</h2>
+            <span class="work-year">2025</span>
+          </div>
+          <p class="work-body">
+            DART Jobs had been running successfully for two years, but its
+            underlying architecture had limits that constrained how ML teams could
+            use it. I led the ground-up redesign: defining the system architecture,
+            evaluating tradeoffs, and serving as technical lead through execution.
+            DART Jobs V2 drove a 7x increase in modeling runs and doubled the
+            number of new users on the platform.
           </p>
         </article>
 
