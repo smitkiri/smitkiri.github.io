@@ -40,7 +40,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- What I work on -->
-    <section class="section">
+    <section class="section" id="work-on">
       <p class="section-eyebrow">What I work on</p>
 
       <div class="focus-list">
@@ -107,7 +107,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- Selected Work -->
-    <section class="section">
+    <section class="section" id="selected-work">
       <p class="section-eyebrow">Selected work</p>
 
       <div class="work-list">
@@ -177,7 +177,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- Writing & Talks -->
-    <section class="section">
+    <section class="section" id="writing">
       <p class="section-eyebrow">Writing & talks</p>
 
       <div class="writing-list">
@@ -443,6 +443,7 @@ import Layout from '../layouts/Layout.astro';
   .section {
     padding: 72px 0;
     border-top: 1px solid var(--border);
+    scroll-margin-top: 64px; /* clear the 56px fixed nav + 8px breathing room */
   }
 
   .section-eyebrow {
