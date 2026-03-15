@@ -37,6 +37,25 @@ import Layout from '../layouts/Layout.astro';
         focus is on foundations that compound: infrastructure and strategy that
         multiply what ~40 ML engineers and data scientists can accomplish.
       </p>
+
+      <div class="stats-grid">
+        <div class="stat-tile">
+          <span class="stat-value">350–450</span>
+          <span class="stat-label">ML jobs per day on DART Jobs</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-value">7×</span>
+          <span class="stat-label">increase in modeling runs (DART V2)</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-value">Months → Days</span>
+          <span class="stat-label">model deployment via DART Online</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-value">40+</span>
+          <span class="stat-label">ML engineers on the platform</span>
+        </div>
+      </div>
     </section>
 
     <!-- What I work on -->
@@ -386,7 +405,7 @@ import Layout from '../layouts/Layout.astro';
 
   /* ── Hero ── */
   .hero {
-    padding: 132px 0 96px;
+    padding: 132px 0 64px;
   }
 
   .hero-intro {
@@ -437,6 +456,40 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.85;
     color: var(--body);
     max-width: 620px;
+  }
+
+  /* ── Stat grid ── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .stat-tile {
+    background: color-mix(in srgb, var(--border) 30%, var(--bg));
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .stat-value {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .stat-label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--muted);
+    line-height: 1.4;
   }
 
   /* ── Sections ── */
@@ -678,11 +731,12 @@ import Layout from '../layouts/Layout.astro';
 
   /* ── Mobile ── */
   @media (max-width: 580px) {
-    .hero { padding: 96px 0 72px; }
+    .hero { padding: 96px 0 48px; }
     .hero-name { font-size: 1.75rem; }
     .hero-photo { width: 72px; height: 72px; }
     .nav-right { gap: 1rem; }
     .work-header { flex-direction: column; gap: 0.25rem; }
+    .stats-grid { grid-template-columns: 1fr; }
   }
 </style>
 
