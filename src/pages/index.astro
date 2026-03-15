@@ -8,6 +8,12 @@ import Layout from '../layouts/Layout.astro';
     <div class="nav-inner">
       <a href="#" class="nav-name">Smit Kiri</a>
       <div class="nav-right">
+        <div class="nav-anchor-group">
+          <a href="#work-on" class="nav-ext">Work on</a>
+          <a href="#selected-work" class="nav-ext">Selected work</a>
+          <a href="#writing" class="nav-ext">Writing</a>
+          <span class="nav-sep">·</span>
+        </div>
         <a href="https://github.com/smitkiri" target="_blank" rel="noopener noreferrer" class="nav-ext">GitHub</a>
         <a href="https://linkedin.com/in/smitkiri" target="_blank" rel="noopener noreferrer" class="nav-ext">LinkedIn</a>
         <a href="mailto:smit.kiri@gmail.com" class="nav-ext">Email</a>
@@ -395,6 +401,22 @@ import Layout from '../layouts/Layout.astro';
     transition: color 0.2s;
   }
   .nav-ext:hover { color: var(--text); }
+
+  .nav-anchor-group {
+    display: contents; /* children participate in .nav-right flex layout directly */
+  }
+
+  .nav-sep {
+    font-size: 0.75rem;
+    color: var(--border);
+    user-select: none;
+  }
+
+  @media (max-width: 680px) {
+    .nav-anchor-group {
+      display: none;
+    }
+  }
 
   /* ── Main container ── */
   main {
