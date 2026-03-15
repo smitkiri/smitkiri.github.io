@@ -9,14 +9,14 @@ import Layout from '../layouts/Layout.astro';
       <a href="#" class="nav-name">Smit Kiri</a>
       <div class="nav-right">
         <div class="nav-anchor-group">
-          <a href="#work-on" class="nav-ext">Work on</a>
-          <a href="#selected-work" class="nav-ext">Selected work</a>
-          <a href="#writing" class="nav-ext">Writing</a>
+          <a href="#work-on" class="nav-anchor">Work on</a>
+          <a href="#selected-work" class="nav-anchor">Selected work</a>
+          <a href="#writing" class="nav-anchor">Writing</a>
           <span class="nav-sep">·</span>
         </div>
-        <a href="https://github.com/smitkiri" target="_blank" rel="noopener noreferrer" class="nav-ext">GitHub</a>
-        <a href="https://linkedin.com/in/smitkiri" target="_blank" rel="noopener noreferrer" class="nav-ext">LinkedIn</a>
-        <a href="mailto:smit.kiri@gmail.com" class="nav-ext">Email</a>
+        <a href="https://github.com/smitkiri" target="_blank" rel="noopener noreferrer" class="nav-ext">GitHub ↗</a>
+        <a href="https://linkedin.com/in/smitkiri" target="_blank" rel="noopener noreferrer" class="nav-ext">LinkedIn ↗</a>
+        <a href="mailto:smit.kiri@gmail.com" class="nav-ext">Email ↗</a>
       </div>
     </div>
   </nav>
@@ -396,11 +396,20 @@ import Layout from '../layouts/Layout.astro';
   .nav-ext {
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    color: var(--muted);
+    color: var(--light);
     letter-spacing: 0.02em;
     transition: color 0.2s;
   }
   .nav-ext:hover { color: var(--text); }
+
+  .nav-anchor {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text);
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .nav-anchor:hover { opacity: 0.5; }
 
   .nav-anchor-group {
     display: contents; /* children participate in .nav-right flex layout directly */
@@ -408,7 +417,7 @@ import Layout from '../layouts/Layout.astro';
 
   .nav-sep {
     font-size: 0.75rem;
-    color: var(--border);
+    color: var(--light);
     user-select: none;
   }
 
