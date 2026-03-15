@@ -414,7 +414,7 @@ import Layout from '../layouts/Layout.astro';
 
   @media (max-width: 680px) {
     .nav-anchor-group {
-      display: none;
+      display: none; /* overrides `contents` above — hides anchors + separator on small screens */
     }
   }
 
