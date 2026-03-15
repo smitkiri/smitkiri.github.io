@@ -47,11 +47,11 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- What I work on -->
     <section class="section" id="work-on">
-      <details>
-        <summary class="section-eyebrow">What I work on</summary>
-        <div class="focus-list">
-        <div class="focus-item">
-          <h2 class="focus-title">Distributed Compute</h2>
+      <p class="section-eyebrow">What I work on</p>
+
+      <div class="focus-list">
+        <details class="focus-item">
+          <summary class="focus-title">Distributed Compute</summary>
           <p class="focus-body">
             Klaviyo's ML teams needed to run large-scale training and batch inference
             workloads across hundreds of nodes, reliably. I built DART Jobs, the compute
@@ -61,10 +61,10 @@ import Layout from '../layouts/Layout.astro';
             existed. In 2025, a ground-up redesign of the platform drove a 7x increase
             in modeling runs and doubled the number of new users.
           </p>
-        </div>
+        </details>
 
-        <div class="focus-item">
-          <h2 class="focus-title">Model Serving</h2>
+        <details class="focus-item">
+          <summary class="focus-title">Model Serving</summary>
           <p class="focus-body">
             Deploying a new production online inference system used to require months of
             custom infrastructure work from individual teams. I built DART Online
@@ -73,10 +73,10 @@ import Layout from '../layouts/Layout.astro';
             observable path from trained model to production without rebuilding the
             foundation each time.
           </p>
-        </div>
+        </details>
 
-        <div class="focus-item">
-          <h2 class="focus-title">ML Platform & Tooling</h2>
+        <details class="focus-item">
+          <summary class="focus-title">ML Platform & Tooling</summary>
           <p class="focus-body">
             The internal layer that multiplies what ML engineers and data scientists can
             do: experiment tracking with MLflow on Kubernetes, a model registry, VectorDB
@@ -85,10 +85,10 @@ import Layout from '../layouts/Layout.astro';
             deployments to a single YAML — less friction between an idea and a
             production system.
           </p>
-        </div>
+        </details>
 
-        <div class="focus-item">
-          <h2 class="focus-title">Platform Strategy</h2>
+        <details class="focus-item">
+          <summary class="focus-title">Platform Strategy</summary>
           <p class="focus-body">
             Defining long-horizon technical direction for Klaviyo's ML platform —
             authoring roadmaps for distributed compute, model serving, and the
@@ -96,33 +96,32 @@ import Layout from '../layouts/Layout.astro';
             to review system designs and ensure the ML platform coheres with
             infrastructure direction at the company level.
           </p>
-        </div>
+        </details>
 
-        <div class="focus-item">
-          <h2 class="focus-title">
+        <details class="focus-item">
+          <summary class="focus-title">
             ML Orchestration
             <span class="focus-wip">in progress</span>
-          </h2>
+          </summary>
           <p class="focus-body">
             Currently building end-to-end ML pipeline orchestration with Prefect —
             bringing structured scheduling, dependency management, and observability
             to the full ML lifecycle, from data ingestion through model deployment.
           </p>
-        </div>
-        </div>
-      </details>
+        </details>
+      </div>
     </section>
 
     <!-- Selected Work -->
     <section class="section" id="selected-work">
-      <details>
-        <summary class="section-eyebrow">Selected work</summary>
-        <div class="work-list">
-        <article class="work-item">
-          <div class="work-header">
+      <p class="section-eyebrow">Selected work</p>
+
+      <div class="work-list">
+        <details class="work-item">
+          <summary class="work-header">
             <h2 class="work-title">Reinventing Klaviyo's compute platform</h2>
             <span class="work-year">2025</span>
-          </div>
+          </summary>
           <p class="work-body">
             DART Jobs had been running successfully for two years, but its
             underlying architecture had limits that constrained how ML teams could
@@ -132,13 +131,13 @@ import Layout from '../layouts/Layout.astro';
             number of new users on the platform, unlocking a new generation of
             ML-powered products that weren't feasible before.
           </p>
-        </article>
+        </details>
 
-        <article class="work-item">
-          <div class="work-header">
+        <details class="work-item">
+          <summary class="work-header">
             <h2 class="work-title">DART becomes Klaviyo's ML foundation</h2>
             <span class="work-year">2024</span>
-          </div>
+          </summary>
           <p class="work-body">
             By 2024, DART had grown from infrastructure into institution — 40
             systems across 6 teams running on the platform. Teams that had spent
@@ -148,13 +147,13 @@ import Layout from '../layouts/Layout.astro';
             system entirely, and a third deployed a suite of new compliance
             models that had no path to production before DART existed.
           </p>
-        </article>
+        </details>
 
-        <article class="work-item">
-          <div class="work-header">
+        <details class="work-item">
+          <summary class="work-header">
             <h2 class="work-title">Distributed ML compute at Klaviyo</h2>
             <span class="work-year">2023</span>
-          </div>
+          </summary>
           <p class="work-body">
             Distributed training and large-scale batch inference across hundreds of nodes
             wasn't possible with Klaviyo's existing infrastructure. I built DART Jobs,
@@ -164,13 +163,13 @@ import Layout from '../layouts/Layout.astro';
             foundation for Klaviyo's most compute-intensive research and production
             workloads.
           </p>
-        </article>
+        </details>
 
-        <article class="work-item">
-          <div class="work-header">
+        <details class="work-item">
+          <summary class="work-header">
             <h2 class="work-title">From three months to three days</h2>
             <span class="work-year">2023</span>
-          </div>
+          </summary>
           <p class="work-body">
             At Klaviyo, each ML team was building its own serving infrastructure from
             scratch. The process was slow, duplicated across teams, and pulled engineers
@@ -179,16 +178,15 @@ import Layout from '../layouts/Layout.astro';
             to production. Standing up a new serving endpoint went from a months-long
             engineering effort to a matter of days.
           </p>
-        </article>
-        </div>
-      </details>
+        </details>
+      </div>
     </section>
 
     <!-- Writing & Talks -->
     <section class="section" id="writing">
-      <details>
-        <summary class="section-eyebrow">Writing & talks</summary>
-        <div class="writing-list">
+      <p class="section-eyebrow">Writing & talks</p>
+
+      <div class="writing-list">
         <a
           href="https://www.youtube.com/watch?v=9vcMfdQC_p4"
           target="_blank"
@@ -324,8 +322,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="writing-arrow">↗</span>
           </div>
         </a>
-        </div>
-      </details>
+      </div>
     </section>
   </main>
 
@@ -486,27 +483,9 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 400;
     letter-spacing: -0.02em;
     color: var(--text);
+    margin-bottom: 2.75rem;
     line-height: 1.1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    list-style: none;
-    user-select: none;
   }
-  .section-eyebrow::-webkit-details-marker { display: none; }
-  .section-eyebrow::after {
-    content: '+';
-    font-family: var(--font-mono);
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: var(--light);
-    transition: color 0.2s;
-    flex-shrink: 0;
-  }
-  details[open] .section-eyebrow::after { content: '−'; }
-  details[open] .section-eyebrow { margin-bottom: 2.75rem; }
-  details .section-eyebrow:hover::after { color: var(--text); }
 
   /* ── Focus areas ── */
   .focus-list {
@@ -520,12 +499,28 @@ import Layout from '../layouts/Layout.astro';
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--text);
-    margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
     gap: 0.625rem;
     letter-spacing: -0.01em;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
   }
+  .focus-title::-webkit-details-marker { display: none; }
+  details[open] .focus-title { margin-bottom: 0.5rem; }
+  details .focus-title::before {
+    content: '+';
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--light);
+    width: 1rem;
+    flex-shrink: 0;
+    transition: color 0.2s;
+  }
+  details[open] .focus-title::before { content: '−'; }
+  details .focus-title:hover::before { color: var(--text); }
 
   .focus-wip {
     font-family: var(--font-mono);
@@ -558,8 +553,23 @@ import Layout from '../layouts/Layout.astro';
     align-items: baseline;
     justify-content: space-between;
     gap: 1rem;
-    margin-bottom: 0.875rem;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
   }
+  .work-header::-webkit-details-marker { display: none; }
+  details[open] .work-header { margin-bottom: 0.875rem; }
+  details .work-header::after {
+    content: '+';
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--light);
+    flex-shrink: 0;
+    transition: color 0.2s;
+  }
+  details[open] .work-header::after { content: '−'; }
+  details .work-header:hover::after { color: var(--text); }
 
   .work-title {
     font-family: var(--font-display);
