@@ -19,6 +19,7 @@ import Layout from '../layouts/Layout.astro';
   <aside class="side-nav">
     <a href="#work-on" class="side-nav-link">Work on</a>
     <a href="#selected-work" class="side-nav-link">Selected work</a>
+    <a href="#projects" class="side-nav-link">Personal projects</a>
     <a href="#writing" class="side-nav-link">Writing</a>
     <a href="#patents" class="side-nav-link">Patents</a>
   </aside>
@@ -179,6 +180,48 @@ import Layout from '../layouts/Layout.astro';
             inference platform on Ray Serve that standardized the path from trained model
             to production. Standing up a new serving endpoint went from a months-long
             engineering effort to a matter of days.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Personal Projects -->
+    <section class="section" id="projects">
+      <p class="section-eyebrow">Personal projects</p>
+
+      <div class="work-list">
+        <article class="work-item">
+          <div class="work-header">
+            <h2 class="work-title">
+              <a href="https://github.com/smitkiri/ehr-relation-extraction" target="_blank" rel="noopener noreferrer" class="work-link">
+                EHR Relation Extraction
+                <span class="writing-arrow">↗</span>
+              </a>
+            </h2>
+            <span class="work-year">91 ★ · 32 forks</span>
+          </div>
+          <p class="work-body">
+            Named Entity Recognition and Relation Extraction from Electronic
+            Health Records. Uses BioBERT for entity recognition and a
+            BiLSTM-CRF architecture to extract relationships between medical
+            entities like drugs, adverse events, and dosages from clinical text.
+          </p>
+        </article>
+
+        <article class="work-item">
+          <div class="work-header">
+            <h2 class="work-title">
+              <a href="https://github.com/smitkiri/news-qa" target="_blank" rel="noopener noreferrer" class="work-link">
+                News QA
+                <span class="writing-arrow">↗</span>
+              </a>
+            </h2>
+            <span class="work-year">11 ★ · 2 forks</span>
+          </div>
+          <p class="work-body">
+            A reading comprehension based question-answering model for news
+            articles. Built with BERT and DistilBERT transformer models in
+            PyTorch, trained on the Microsoft NewsQA dataset.
           </p>
         </article>
       </div>
@@ -621,6 +664,24 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.9375rem;
     line-height: 1.85;
     color: var(--body);
+  }
+
+  .work-link {
+    color: inherit;
+    transition: opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .work-link:hover { opacity: 0.6; }
+  .work-link .writing-arrow {
+    font-size: 0.85rem;
+    color: var(--light);
+    transition: transform 0.2s, color 0.2s;
+  }
+  .work-link:hover .writing-arrow {
+    transform: translate(2px, -2px);
+    color: var(--text);
   }
 
   /* ── Writing & Talks ── */
