@@ -3,23 +3,25 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <!-- Nav -->
+  <!-- Top bar -->
   <nav id="nav">
     <div class="nav-inner">
       <a href="#" class="nav-name">Smit Kiri</a>
       <div class="nav-right">
-        <div class="nav-anchor-group">
-          <a href="#work-on" class="nav-anchor">Work on</a>
-          <a href="#selected-work" class="nav-anchor">Selected work</a>
-          <a href="#writing" class="nav-anchor">Writing</a>
-          <span class="nav-sep">·</span>
-        </div>
         <a href="https://github.com/smitkiri" target="_blank" rel="noopener noreferrer" class="nav-ext">GitHub ↗</a>
         <a href="https://linkedin.com/in/smitkiri" target="_blank" rel="noopener noreferrer" class="nav-ext">LinkedIn ↗</a>
         <a href="mailto:smit.kiri@gmail.com" class="nav-ext">Email ↗</a>
       </div>
     </div>
   </nav>
+
+  <!-- Side nav -->
+  <aside class="side-nav">
+    <a href="#work-on" class="side-nav-link">Work on</a>
+    <a href="#selected-work" class="side-nav-link">Selected work</a>
+    <a href="#writing" class="side-nav-link">Writing</a>
+    <a href="#patents" class="side-nav-link">Patents</a>
+  </aside>
 
   <main>
     <!-- Hero -->
@@ -324,6 +326,64 @@ import Layout from '../layouts/Layout.astro';
         </a>
       </div>
     </section>
+
+    <!-- Patents -->
+    <section class="section" id="patents">
+      <p class="section-eyebrow">Patents</p>
+
+      <div class="patent-list">
+        <a
+          href="https://patents.google.com/patent/US12430500B2"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="writing-row"
+        >
+          <div class="writing-meta">
+            <span class="writing-type">US Patent 12,430,500</span>
+            <span class="meta-sep">·</span>
+            <span class="writing-date">2025</span>
+          </div>
+          <div class="writing-bottom">
+            <span class="writing-title">Implicitly annotating textual data in conversational messaging</span>
+            <span class="writing-arrow">↗</span>
+          </div>
+        </a>
+
+        <a
+          href="https://patents.google.com/patent/US11989502B2"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="writing-row"
+        >
+          <div class="writing-meta">
+            <span class="writing-type">US Patent 11,989,502</span>
+            <span class="meta-sep">·</span>
+            <span class="writing-date">2024</span>
+          </div>
+          <div class="writing-bottom">
+            <span class="writing-title">Implicitly annotating textual data in conversational messaging</span>
+            <span class="writing-arrow">↗</span>
+          </div>
+        </a>
+
+        <a
+          href="https://patents.google.com/patent/US20250029409A1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="writing-row"
+        >
+          <div class="writing-meta">
+            <span class="writing-type">US Patent App. 18/223,250</span>
+            <span class="meta-sep">·</span>
+            <span class="writing-date">2023</span>
+          </div>
+          <div class="writing-bottom">
+            <span class="writing-title">Implicitly associating user intents to agent selected responses</span>
+            <span class="writing-arrow">↗</span>
+          </div>
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -383,29 +443,30 @@ import Layout from '../layouts/Layout.astro';
   }
   .nav-ext:hover { color: var(--text); }
 
-  .nav-anchor {
+  /* ── Side nav ── */
+  .side-nav {
+    position: fixed;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    z-index: 100;
+  }
+
+  .side-nav-link {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--text);
+    font-size: 0.7rem;
+    color: var(--light);
     letter-spacing: 0.02em;
     transition: color 0.2s;
+    white-space: nowrap;
   }
-  .nav-anchor:hover { opacity: 0.5; }
+  .side-nav-link:hover { color: var(--text); }
 
-  .nav-anchor-group {
-    display: contents; /* children participate in .nav-right flex layout directly */
-  }
-
-  .nav-sep {
-    font-size: 0.75rem;
-    color: var(--light);
-    user-select: none;
-  }
-
-  @media (max-width: 680px) {
-    .nav-anchor-group {
-      display: none; /* overrides `contents` above — hides anchors + separator on small screens */
-    }
+  @media (max-width: 1100px) {
+    .side-nav { display: none; }
   }
 
   /* ── Main container ── */
@@ -680,6 +741,9 @@ import Layout from '../layouts/Layout.astro';
     transform: translate(2px, -2px);
     color: var(--text);
   }
+
+  /* ── Patents ── */
+  .patent-list { display: flex; flex-direction: column; gap: 0; }
 
   /* ── Footer ── */
   footer {
